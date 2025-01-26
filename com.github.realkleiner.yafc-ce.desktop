@@ -2,5 +2,6 @@
 Type=Application
 Name=YAFC-CE
 Icon=com.github.realkleiner.yafc-ce
-Exec=YAFC-CE
+Exec=Yafc
+Categories=Utility;Calculator;
 Terminal=false
