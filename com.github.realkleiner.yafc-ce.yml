@@ -1,8 +1,8 @@
-app-id: com.github.petebuffon.yafc
+app-id: com.github.realkleiner.yafc-ce
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
-command: YAFC
+command: YAFC-CE
 finish-args:
   - "--device=dri"
   - "--socket=x11"
@@ -12,22 +12,22 @@ finish-args:
   - "--filesystem=~/.var/app/com.valvesoftware.Steam:ro"
   - "--persist=.yafc"
 modules:
-  - name: yafc
+  - name: yafc-ce
     buildsystem: simple
     build-commands:
       - mkdir .yafc
       - mkdir /app/bin
-      - tar xfvz yafc.tar.gz -C /app/bin
-      - install -Dp -m 644 com.github.petebuffon.yafc.desktop /app/share/applications/com.github.petebuffon.yafc.desktop
-      - install -Dp -m 644 com.github.petebuffon.yafc.appdata.xml /app/share/appdata/com.github.petebuffon.yafc.appdata.xml
-      - install -Dp -m 644 com.github.petebuffon.yafc-128.svg /app/share/icons/hicolor/scalable/apps/com.github.petebuffon.yafc.svg
+      - tar xfvz Yafc-CE-Linux-2.6.0.tar.gz -C /app/bin --strip-components=1 
+      - install -Dp -m 644 com.github.realkleiner.yafc-ce.desktop /app/share/applications/com.github.realkleiner.yafc-ce.desktop
+      - install -Dp -m 644 com.github.realkleiner.yafc-ce.appdata.xml /app/share/appdata/com.github.realkleiner.yafc-ce.appdata.xml
+      - install -Dp -m 644 com.github.realkleiner.yafc-ce.png /app/share/icons/hicolor/scalable/apps/com.github.realkleiner.yafc-ce.png
     sources:
       - type: "file"
-        url: "https://github.com/petebuffon/yafc/releases/download/v0.6.0/yafc.tar.gz"
-        sha256: "0eb5edc0b6871922059815ae4fb52bf508ea3b443519996823ca62b19865af6d"
+        url: "https://github.com/shpaass/yafc-ce/releases/download/2.6.0/Yafc-CE-Linux-2.6.0.tar.gz"
+        sha256: "d80e05577d7556d4be3044fd1b0c22f6dd907357014ba01df642d4b7eba8b7a5"
       - type: "file"
-        path: "com.github.petebuffon.yafc.desktop"
+        path: "com.github.realkleiner.yafc-ce.desktop"
       - type: "file"
-        path: "com.github.petebuffon.yafc.appdata.xml"
+        path: "com.github.realkleiner.yafc-ce.appdata.xml"
       - type: "file"
-        path: "com.github.petebuffon.yafc-128.svg"
+        path: "com.github.realkleiner.yafc-ce.png"
