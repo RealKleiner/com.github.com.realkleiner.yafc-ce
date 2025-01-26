@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=YAFC-CE
-Icon=com.github.realkleiner.yafc-ce
+Icon=io.github.realkleiner.yafc-ce
 Exec=Yafc
 Categories=Utility;Calculator;
 Terminal=false

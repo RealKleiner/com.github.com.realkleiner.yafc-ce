@@ -1,4 +1,4 @@
-app-id: com.github.realkleiner.yafc-ce
+app-id: io.github.realkleiner.yafc-ce
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
@@ -31,16 +31,16 @@ modules:
       - mkdir -p /app/bin
       - tar xfvz Yafc-CE-Linux-2.6.0.tar.gz -C /app/bin --strip-components=1 
       - chmod +x /app/bin/Yafc
-      - install -Dp -m 644 com.github.realkleiner.yafc-ce.desktop /app/share/applications/com.github.realkleiner.yafc-ce.desktop
-      - install -Dp -m 644 com.github.realkleiner.yafc-ce.appdata.xml /app/share/appdata/com.github.realkleiner.yafc-ce.appdata.xml
-      - install -Dp -m 644 com.github.realkleiner.yafc-ce.png /app/share/icons/hicolor/scalable/apps/com.github.realkleiner.yafc-ce.png
+      - install -Dp -m 644 io.github.realkleiner.yafc-ce.desktop /app/share/applications/com.github.realkleiner.yafc-ce.desktop
+      - install -Dp -m 644 io.github.realkleiner.yafc-ce.appdata.xml /app/share/appdata/com.github.realkleiner.yafc-ce.appdata.xml
+      - install -Dp -m 644 io.github.realkleiner.yafc-ce.png /app/share/icons/hicolor/scalable/apps/com.github.realkleiner.yafc-ce.png
     sources:
       - type: "file"
         url: "https://github.com/shpaass/yafc-ce/releases/download/2.6.0/Yafc-CE-Linux-2.6.0.tar.gz"
         sha256: "d80e05577d7556d4be3044fd1b0c22f6dd907357014ba01df642d4b7eba8b7a5"
       - type: "file"
-        path: "com.github.realkleiner.yafc-ce.desktop"
+        path: "io.github.realkleiner.yafc-ce.desktop"
       - type: "file"
-        path: "com.github.realkleiner.yafc-ce.appdata.xml"
+        path: "io.github.realkleiner.yafc-ce.appdata.xml"
       - type: "file"
-        path: "com.github.realkleiner.yafc-ce.png"
+        path: "io.github.realkleiner.yafc-ce.png"

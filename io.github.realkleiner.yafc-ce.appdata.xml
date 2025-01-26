@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>com.github.realkleiner.yafc-ce</id>
+  <id>io.github.realkleiner.yafc-ce</id>
   <name>YAFC-CE</name>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>YAFC is a Factorio calculator, planner and analyser. The main goal of YAFC is to cope with heavily modded games.</summary>
