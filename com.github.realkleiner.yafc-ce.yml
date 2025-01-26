@@ -2,7 +2,13 @@ app-id: com.github.realkleiner.yafc-ce
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
-command: YAFC-CE
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.dotnet8
+build-options:
+  prepend-path: "/usr/lib/sdk/dotnet8/bin"
+  append-ld-library-path: "/usr/lib/sdk/dotnet8/lib"
+  prepend-pkg-config-path: "/usr/lib/sdk/dotnet8/lib/pkgconfig"
+command: Yafc
 finish-args:
   - "--device=dri"
   - "--socket=x11"
@@ -11,13 +17,20 @@ finish-args:
   - "--filesystem=~/.steam/steam/steamapps/common/Factorio/data:ro"
   - "--filesystem=~/.var/app/com.valvesoftware.Steam:ro"
   - "--persist=.yafc"
+  - "--env=DOTNET_ROOT=/app/lib/dotnet"
 modules:
+  - name: dotnet
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/dotnet8/bin/install.sh
+
   - name: yafc-ce
     buildsystem: simple
     build-commands:
       - mkdir .yafc
-      - mkdir /app/bin
+      - mkdir -p /app/bin
       - tar xfvz Yafc-CE-Linux-2.6.0.tar.gz -C /app/bin --strip-components=1 
+      - chmod +x /app/bin/Yafc
       - install -Dp -m 644 com.github.realkleiner.yafc-ce.desktop /app/share/applications/com.github.realkleiner.yafc-ce.desktop
       - install -Dp -m 644 com.github.realkleiner.yafc-ce.appdata.xml /app/share/appdata/com.github.realkleiner.yafc-ce.appdata.xml
       - install -Dp -m 644 com.github.realkleiner.yafc-ce.png /app/share/icons/hicolor/scalable/apps/com.github.realkleiner.yafc-ce.png
