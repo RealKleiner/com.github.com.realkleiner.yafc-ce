@@ -4,7 +4,7 @@
   <id>io.github.realkleiner.yafc-ce</id>
   
   <name>YAFC-CE</name>
-  <summary>Yet Another Factorio Calculator or YAFC is a planner and analyzer</summary>
+  <summary>A planner and analyzer for Factorio</summary>
   
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
@@ -34,14 +34,24 @@
 
   <releases>
       <release version="2.6.0" date="2025-01-20">
-          <url>https://github.com/shpaass/yafc-ce/releases/tag/2.6.0</url>
+          <url type="details">https://github.com/shpaass/yafc-ce/releases/tag/2.6.0</url>
       </release>
   </releases>
 
   <screenshots>
     <screenshot type="default">
-        <caption>Quick demo of what YAFC-CE can do</caption>
-      <image>https://github.com/RealKleiner/yafc-ce/blob/master/Docs/Media/Main.gif</image>
+        <caption>Startup window</caption>
+        <image>https://github.com/RealKleiner/io.github.com.realkleiner.yafc-ce/blob/5d9f6f0343055aa31e961481b4ca3cc7808ba14b/screenshot1.png</image>
     </screenshot>
   </screenshots>
+
+  <requires>
+      <control>keyboard</control>
+      <control>pointing</control>
+      <display_length compare="ge">768</display_length>
+  </requires>
+
+  <custom>
+      <value key="flathub:manifest">https://github.com/RealKleiner/io.github.com.realkleiner.yafc-ce/blob/dfa1fc6db1a5925c493035e6c879184383329156/io.github.realkleiner.yafc-ce.yml</value>
+  </custom>
 </component>
