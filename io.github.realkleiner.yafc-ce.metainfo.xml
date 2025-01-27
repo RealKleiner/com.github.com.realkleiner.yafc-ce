@@ -23,7 +23,7 @@
 
   <url type="homepage">https://github.com/RealKleiner/yafc-ce</url>
   <url type="vcs-browser">https://github.com/RealKleiner/yafc-ce</url>
-  <url type="bugtracker">https://github.com/RealKleiner/yafc-ce</url>
+  <url type="bugtracker">https://github.com/RealKleiner/yafc-ce/issues</url>
   <developer id="io.github.realkleiner">
       <name>RealKleiner</name>
   </developer>
